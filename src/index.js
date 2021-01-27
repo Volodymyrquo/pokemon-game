@@ -1,11 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+const List = () => {
+  return (
+    <ul>
+      <li>First list</li>
+      <li>Second list</li>
+    </ul>
+  );
+};
+
+const Header = () => {
+  return <h1>Hello React JS!</h1>;
+};
+
+const el = (
+  <>
+    <Header />
+    <List />
+  </>
 );
+ReactDOM.render(el, document.getElementById('root'));
