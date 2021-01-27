@@ -1,13 +1,13 @@
 import React from 'react';
 import classes from './Header.module.css';
 
-const Header = () => {
+const Header = ({ title, descr }) => {
   return (
     <header className={classes.root}>
       <div className={classes.forest}></div>
       <div className={classes.container}>
-        <h1>This is title</h1>
-        <p>This is Description!</p>
+        <h1>{title}</h1>
+        <p>{descr}</p>
       </div>
     </header>
   );

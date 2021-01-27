@@ -1,23 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App';
 
-const List = () => {
-  return (
-    <ul>
-      <li>First list</li>
-      <li>Second list</li>
-    </ul>
-  );
-};
-
-const Header = () => {
-  return <h1>Hello React JS!</h1>;
-};
-
-const el = (
-  <>
-    <Header />
-    <List />
-  </>
-);
-ReactDOM.render(el, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));

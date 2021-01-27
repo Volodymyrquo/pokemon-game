@@ -1,10 +1,23 @@
 import React from 'react';
+import classes from './Layout.module.css';
 
-const Layout = () => {
+const Layout = ({ title, descr, id, urlBg, colorBg }) => {
+  const styleBg = urlBg || colorBg;
+
   return (
-    <div>
-      <h1>This is layout page...</h1>
-    </div>
+    <section className={classes.root} id={id} style={styleBg}>
+      <div className='wrapper'>
+        <article>
+          <div className={classes.title}>
+            <h3>{title}</h3>
+            <span className={classes.separator}></span>
+          </div>
+          <div className={classes.desc + ' ' + classes.full}>
+            <p>{descr}</p>
+          </div>
+        </article>
+      </div>
+    </section>
   );
 };
 
