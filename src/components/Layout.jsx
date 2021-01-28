@@ -2,10 +2,10 @@ import React from 'react';
 import classes from './Layout.module.css';
 
 const Layout = ({ title, descr, id, urlBg, colorBg }) => {
-  const styleBg = urlBg || colorBg;
+  const style = { ...urlBg, ...colorBg };
 
   return (
-    <section className={classes.root} id={id} style={styleBg}>
+    <section className={classes.root} id={id} style={style}>
       <div className='wrapper'>
         <article>
           <div className={classes.title}>
