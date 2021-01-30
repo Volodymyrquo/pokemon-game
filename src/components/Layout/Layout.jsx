@@ -2,7 +2,6 @@ import React from 'react';
 import classes from './Layout.module.css';
 
 const Layout = ({ title, descr, id, urlBg, colorBg, children }) => {
-  console.log('####: props', children);
   const style = { ...urlBg, ...colorBg };
 
   return (
