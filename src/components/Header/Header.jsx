@@ -1,11 +1,11 @@
 import React from 'react';
-import classes from './Header.module.css';
+import s from './Header.module.css';
 
 const Header = ({ title, descr }) => {
   return (
-    <header className={classes.root}>
-      <div className={classes.forest}></div>
-      <div className={classes.container}>
+    <header className={s.root}>
+      <div className={s.forest}></div>
+      <div className={s.container}>
         <h1>{title}</h1>
         <p>{descr}</p>
       </div>

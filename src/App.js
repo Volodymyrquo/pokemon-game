@@ -5,7 +5,7 @@ import Footer from './components/Footer/Footer';
 
 import bg2 from './assets/bg2.jpg';
 import bg3 from './assets/bg3.jpg';
-import PokemonCard from './components/PokemonCard';
+import PokemonCard from './components/PokemonCard/PokemonCard';
 
 const POKEMONS = [
   {
@@ -130,7 +130,7 @@ const POKEMONS = [
   },
 ];
 
-function App() {
+const App = () => {
   const title = 'This is title';
   const descr = 'This is Description!';
   const id = 1;
@@ -144,10 +144,17 @@ function App() {
         urlBg={{ backgroundImage: `url(${bg2})` }}
         id={id}
       />
-      <Layout title={title} colorBg={{ backgroundColor: '#42f6f0' }} id={id}>
+      <Layout title={'Cards'} colorBg={{ backgroundColor: '#42f6f0' }} id={id}>
         <div className='flex'>
           {POKEMONS.map((item) => (
-            <PokemonCard {...item} />
+            <PokemonCard
+              key={item.id}
+              id={item.id}
+              name={item.name}
+              type={item.type}
+              values={item.values}
+              img={item.img}
+            />
           ))}
         </div>
         <p>
@@ -175,6 +182,6 @@ function App() {
       <Footer />
     </>
   );
-}
+};
 
 export default App;
