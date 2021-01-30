@@ -24,8 +24,10 @@ function App() {
         title={title}
         descr={descr}
         colorBg={{ backgroundColor: '#42f6f0' }}
-        id={id}
-      />
+        id={id}>
+        <p>lorem ipsum dolor asmet</p>
+        <p>lorem ipsum dolor asmet</p>
+      </Layout>
       <Layout
         title={title}
         descr={descr}
